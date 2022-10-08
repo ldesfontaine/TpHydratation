@@ -1,0 +1,43 @@
+7) Vérifier à nouveau le contenu de la table animal sous PhpMyAdmin. Que constatez-vous ?
+    On constate que tous les noms des animaux on changé : Tous les animaux on 'Marcel' pour nom.
+
+8 - 9 - 10) A la ligne 22 du script hydratation.php remplacez ‘Marcel’ par ‘Maurice’ .
+    Tous les noms des animaux sont remplacez par 'Maurice' dans la BDD et donc sur la page hydratation.php .
+
+11)
+    a/ La ligne n°3 permet d'effectuer la conexion à MySql,et donc à la db animaux . 
+       Elle recupére l'id et le pswword pour ce conecter.
+
+    b/ La ligne n°4 permet de préparer une requête SQl,
+       cette requête va selectionner la table Animal et ces éléments (id, nom, espece) .
+
+    c/ La ligne n°5 permet de return une nouvelle instance de la classe demandé.
+       Elle permet de faire un lien entre l'ID , le nom et l'espece .
+
+    d/ Ligne 7 à 18 :
+       Il y a une boucle foreach, pour tous les animaux : 
+       - On recupére sont ID avec la méthode getID()
+       - On recupére sont nom avec la méthode getNom()
+       - On recupére sont espece avec le méthode getEspece()
+
+       -Chaque animal se presente avec la methode sePresenter()
+       -Chaque animal dort avec la methode dormir()
+
+       Tous ces informations sont placé dans un tableau, ' <td> , <td/> ' .
+       Chaque colone est égale à l'ID , le nom , l'espece et les lignes sont
+       les différents animaux .
+
+    e/ Ligne 20 à 23 :
+       Il y a encore une boucle foreach pour chaque animaux dans la classe animal.
+       On utilise la méthode setNom() , qui permet de définir un nom pour les animaux.
+
+    f/ La ligne 24 , mets a jour la bdd via la commande '$update' en focntion 
+       des éléments recupére avec les différentes methodes lors de l'éxécution de 'hydratation.php' .
+
+    g/ Ligne 25 à 32 :
+       Il y a un foreach (boucle) pour tous les animaux , on vérifie si l'update 
+       a bien était éfectuer avec la commande succes, elle return true ou false en focntion de si un echec est detecté.
+       Elle mets a jours la page hydratation.php en récuperant les valeurs de nom, espece, id 
+       avec les methodes get .
+
+**les fautes ces dans la tête**
